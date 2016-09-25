@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using MyTeams.DataAccess;
+using Microsoft.EntityFrameworkCore;
 
 namespace MyTeams
 {
@@ -29,6 +31,8 @@ namespace MyTeams
         {
             // Add framework services.
             services.AddMvc();
+            var connectionString = @"Server=(localdb)\MyTeamLocalDb;Database=MyTeamLocalDatabase;Trusted_Connection=True;";
+            services.AddDbContext<MyTeamsContext>(options => options.UseSqlServer(connectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
