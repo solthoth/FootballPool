@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Team } from '../models/team';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -43,7 +44,7 @@ export class TeamsService {
     { id: 32, division: 'AFC', location: 'Tennessee', name: 'Titans' },
 
   ];
-  getTeams(): Team[] {
-    return [];
+  getTeams(): Observable<Team[]> {
+    return of(this.TEAMS);
   }
 }
