@@ -5,14 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TeamsComponent } from './teams/teams.component';
-import { PlayersComponent } from './players/players.component';
+import { GamesComponent } from './games/games.component';
 
 //import { MatExpansionPanel } from '@angular/material/expansion';
 @NgModule({
   declarations: [
     AppComponent,
     TeamsComponent,
-    PlayersComponent
+    GamesComponent
   ],
   imports: [
     BrowserModule,
